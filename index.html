@@ -34,30 +34,45 @@
         <div class="flex-box-container-1">
             <div id="flex-box-result"></div>
         </div>
+    </div>
 
+    <!-- ******* Cat Generater *********************************************** -->
 
-
-<!-- ******* Cat Generater *********************************************** -->
-
-        <div class="container-2">
-            <h2>Challenge 2, Cat Generater</h2>
-            <div class="generateBtn"> 
-                <div class="btn btn-primary" onclick="generateCat()">Generate Cat</div>
-            </div>
-           
-
-
-
-            <div class="flex-box-container-2">
-               
-                <img src="http://thecatapi.com/api/images/get?format=src&type=gif " alt="">
-            
-            </div>
-
+    <div class="container-2">
+        <h2>Challenge 2, Cat Generater</h2>
+        <div class="generateBtn">
+            <div class="btn btn-primary" onclick="generateCat()" id="cat-gen-button">Generate Cat</div>
         </div>
 
 
-        <script src="main.js"></script>
+
+
+        <div class="flex-box-container-2" id="flex-cat-gen">
+
+        </div>
+
+    </div>
+    <!-- ******* Rock Paper Scissor *********************************************** -->
+
+
+    <div class="container-3">
+        <h1>Challenge-3, Rock Papaer and Scissor</h1>
+
+
+        <div class="flex-box-rps" id="flex-box-rps-div">
+            <img id="rock" src="https://www.clipartkey.com/mpngs/m/17-175087_rock-clipart-clip-art-transparent-rock.png"
+                alt="" height="150" width="150" onclick="rpsGame(this)">
+            <img id="paper"
+                src="https://images.assetsdelivery.com/compings_v2/unseenthings/unseenthings0809/unseenthings080900007.jpg"
+                alt="" height="150" width="150" onclick="rpsGame(this)">
+            <img id="scissor"
+                src="https://www.creativefabrica.com/wp-content/uploads/2021/01/19/scissors-Graphics-7892734-1-1-580x386.jpg"
+                alt="" height="150" width="150" onclick="rpsGame(this)">
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
     </div>
 
 
