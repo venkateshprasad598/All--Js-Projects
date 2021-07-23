@@ -41,7 +41,7 @@
     <div class="container-2">
         <h2>Challenge 2, Cat Generater</h2>
         <div class="generateBtn">
-            <div class="btn btn-primary" onclick="generateCat()" id="cat-gen-button">Generate Cat</div>
+            <button class="btn btn-primary" onclick="generateCat()" id="cat-gen-button">Generate Cat</button>
         </div>
 
 
@@ -56,7 +56,7 @@
 
 
     <div class="container-3">
-        <h1>Challenge-3, Rock Papaer and Scissor</h1>
+        <h2>Challenge-3, Rock Paper and Scissor</h2>
 
 
         <div class="flex-box-rps" id="flex-box-rps-div">
@@ -70,6 +70,28 @@
                 alt="" height="150" width="150" onclick="rpsGame(this)">
         </div>
     </div>
+
+
+    <div class="container-4">
+    <h2 id="change-my-color">Challenge 4: Change the color of all Buttons</h2>
+    <div class="flex-box-pick-color">
+        <form action="">
+            <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+                <option value="random">Random</option>
+                <option value="red">Red</option>
+                <option value="green">green</option>
+                <option value="yellow">Yellow</option>
+                <option value="reset">reset</option>
+            </select>
+        </form>
+
+        <button class="btn btn-warning">Wee!</button>
+        <button class="btn btn-success">Yahoo!</button>
+        <button class="btn btn-danger">Google!< /button>
+        <button class="btn btn-primary">facebook</button>
+    </div>
+
+</div>
 
 
     <script src="main.js"></script>

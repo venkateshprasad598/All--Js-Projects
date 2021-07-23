@@ -1,4 +1,4 @@
-function ageInDays(){
+ function ageInDays(){
     let birthYear = prompt("What year were you born.. Good friend?")
     let ageInDays = (2021 - birthYear) * 365
     let h1 = document.createElement("h1")
@@ -106,6 +106,68 @@ computerChoiceDiv.append(computerDiv)
 humanDiv.innerHTML = `<img src = "${imgDataBase[humanImageChoice]}" height= 150 width = 150 style='box-shadow: 0px 10px 20px blue; '>`
 messageDiv.innerHTML = `<h1  style = "color: ${finalMessage["color"]}; font-size:60px; padding:30px"> ${finalMessage["message"]} <\h1>`
 computerDiv.innerHTML = `<img src = "${imgDataBase[computerImageChoice]}" height= 150 width = 150 style='box-shadow: 0px 10px 20px red; '>`
-
 }
 
+// Challenge 4: Change the color
+let all_buttons = document.getElementsByTagName('button')
+console.log(all_buttons[0])
+
+let myButtons = [ ];
+for (let i=0; i<all_buttons.length; i++){
+    myButtons.push(all_buttons[i].classList[1])
+}
+    console.log(myButtons)
+    // console.log(myButtons[0].classList.remove('btn-primary'))
+
+function buttonColorChange(buttonThingy){
+ if (buttonThingy.value === "red"){
+     buttonRed();
+ } else if (buttonThingy.value === "green"){
+    buttonGreen();
+ } else if (buttonThingy.value === "yellow"){
+     buttonYellow();
+ } else if(buttonThingy.value === "reset"){
+    buttonReset();
+ }else if(buttonThingy.value === "random") {
+     buttonRandom();
+ }
+}
+
+
+function buttonRed(){
+    for(let i = 0; i < all_buttons.length; i++){
+        all_buttons[i].classList.remove(all_buttons[i].classList[1])
+        all_buttons[i].classList.add('btn-danger')
+    }
+}
+
+function buttonGreen(){
+    for(let i = 0; i < all_buttons.length; i++){
+        all_buttons[i].classList.remove(all_buttons[i].classList[1])
+        all_buttons[i].classList.add('btn-success')
+    }
+}
+
+function buttonYellow(){
+    for(let i = 0; i < all_buttons.length; i++){
+        all_buttons[i].classList.remove(all_buttons[i].classList[1])
+        all_buttons[i].classList.add('btn-warning')
+    }
+}
+
+function buttonReset(){
+    for(let i = 0; i < all_buttons.length; i++){
+        all_buttons[i].classList.remove(all_buttons[i].classList[1])
+        all_buttons[i].classList.add(myButtons[i])
+    }
+}
+
+function buttonRandom(){
+    let choices = ["btn-primary", "btn-success", "btn-danger", "btn-warning"]
+
+    for(let i = 0; i < all_buttons.length; i++){
+        let randomNumber = Math.floor(Math.random()*4)
+        all_buttons[i].classList.remove(all_buttons[i].classList[1])
+        all_buttons[i].classList.add(choices[randomNumber])
+    }
+}
